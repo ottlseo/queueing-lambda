@@ -36,7 +36,7 @@ CREATE TABLE LatestPlayer (
     | latestPlayerSequenceNo | 마지막으로 플레이한 사용자의 playerSequence. 람다 함수 (updateLatestPlayer)를 이용하여 계속 업데이트 |
 
 
-## 2. Deploying Lambda functions 
+## 2. Deploying Lambda functions for updating DB
 
 ### How to generate
 TBD (CDK code will be added)
