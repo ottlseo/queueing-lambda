@@ -4,7 +4,7 @@ Queueing mechanism using AWS Lambda (nodejs 20.x) and mysql
 ## 1. Deploying database for queueing (RDS for Mysql)
 
 #### `RegistrationSequence` table
-```
+```sql
 CREATE TABLE RegistrationSequence (
     playerId VARCHAR(100) NOT NULL,
     playerSequenceNo INT NOT NULL AUTO_INCREMENT,
@@ -22,7 +22,7 @@ CREATE TABLE RegistrationSequence (
 
 #### `LatestPlayer` table
 
-```
+```sql
 CREATE TABLE LatestPlayer (
     latestPlayerSequenceNo INT NOT NULL,
     PRIMARY KEY (latestPlayerSequenceNo)
@@ -41,7 +41,7 @@ CREATE TABLE LatestPlayer (
 ### How to generate
 TBD (CDK code will be added)
 
-```
+```bash
 cd LAMBDA_DIRECTORY_YOU_WANT
 
 zip -r function.zip node_modules index.mjs   
