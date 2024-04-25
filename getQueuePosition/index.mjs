@@ -43,7 +43,7 @@ const executeQuery = (query, values) => {
 };
 
 export const handler = async (event) => {
-  const id = event.id; // Lambda 함수에 전달된 id 값
+  const id = event['queryStringParameters']['id']; // Lambda 함수에 queryParameter로 전달된 id 값
 
   try {
     const queuePosition = await getQueuePosition(id);
