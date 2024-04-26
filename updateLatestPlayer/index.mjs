@@ -50,8 +50,10 @@ export const handler = async (event) => {
   
     try {
         const playerSequenceNo = await updateLatestPlayer(id);
-        return { message: 'LatestPlayer updated successfully: ' + playerSequenceNo };  
-          // e.g. { "message": "LatestPlayer updated successfully: 3" }
+        return { 
+          latestPlayerNo: playerSequenceNo,
+          message: `LatestPlayer [${id}] updated successfully`
+         };
     } catch (err) {
         return { error: err.message };
     }
